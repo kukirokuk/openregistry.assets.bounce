@@ -6,6 +6,7 @@ from openregistry.assets.core.tests.base import DumpsTestAppwebtest, PrefixedReq
 from openregistry.assets.bounce.tests.base import BaseAssetWebTest
 from openregistry.assets.bounce.tests.json_data import test_asset_bounce_data
 
+DumpsTestAppwebtest.hostname = "lb.api-sandbox.registry.ea2.openprocurement.net"
 
 class AssetResourceTest(BaseAssetWebTest):
 
@@ -81,10 +82,11 @@ class AssetResourceTest(BaseAssetWebTest):
         with open('docs/source/tutorial/create-second-asset.http', 'w') as self.app.file_obj:
             response = self.app.post_json(request_path, {"data": self.initial_data})
             self.assertEqual(response.status, '201 Created')
-
+            asset_id_2 = response.json['data']['id']
+            owner_token_2 = response.json['access']['token']
 
         with open('docs/source/tutorial/pending-second-asset.http', 'w') as self.app.file_obj:
-            response = self.app.patch_json('/{}?acc_token={}'.format(asset_id, owner_token),
+            response = self.app.patch_json('/{}?acc_token={}'.format(asset_id_2, owner_token_2),
                                            {'data': {"status": 'pending'}})
             self.assertEqual(response.status, '200 OK')
 
@@ -143,16 +145,18 @@ class AssetResourceTest(BaseAssetWebTest):
                                        {'data': {"status": 'pending'}})
         self.assertEqual(response.status, '200 OK')
 
-        # Switch to Active
+        # Switch to Verification
         #
         self.app.authorization = ('Basic', ('concierge', ''))
 
-        response = self.app.patch_json('/{}'.format(asset_id),
-                                       {'data': {"status": 'verification',
-                                                 "relatedLot": uuid4().hex}})
-        self.assertEqual(response.status, '200 OK')
+        with open('docs/source/tutorial/asset_switch_to_verification.http', 'w') as self.app.file_obj:
+            response = self.app.patch_json('/{}'.format(asset_id),
+                                           {'data': {"status": 'verification',
+                                                     "relatedLot": uuid4().hex}})
+            self.assertEqual(response.status, '200 OK')
 
-
+        # Switch to Active
+        #
         response = self.app.patch_json('/{}'.format(asset_id),
                                        {'data': {"status": 'active'}})
         self.assertEqual(response.status, '200 OK')

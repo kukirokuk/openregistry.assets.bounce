@@ -30,7 +30,6 @@ DATA:
         "address": {
           "countryName": "Ukraine"
         }, 
-        "id": "0", 
         "unit": {
           "code": "code"
         }, 
@@ -56,7 +55,6 @@ DATA:
         "address": {
           "countryName": "Ukraine"
         }, 
-        "id": "0", 
         "unit": {
           "code": "code"
         }, 
@@ -76,16 +74,10 @@ DATA:
       }, 
       "identifier": {
         "scheme": "UA-EDR", 
-        "id": "00037256", 
-        "uri": "http://www.dus.gov.ua/"
+        "id": "00037256"
       }, 
-      "name": "Державне управління справами", 
       "address": {
-        "countryName": "Україна", 
-        "postalCode": "01220", 
-        "region": "м. Київ", 
-        "streetAddress": "вул. Банкова, 11, корпус 1", 
-        "locality": "м. Київ"
+        "countryName": "Україна"
       }
     }
   }

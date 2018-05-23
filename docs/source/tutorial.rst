@@ -114,14 +114,19 @@ And now asset can be easily deleted:
 Integration with lots
 ---------------------
 
+Automatic switch to verification
 
+.. literalinclude:: tutorial/asset_switch_to_verification.http
+   :language: javascript
+
+Asset is attached to the lot. Related lot information can be seen
 .. literalinclude:: tutorial/attached-to-lot-asset-view.http
    :language: javascript
 
-
+Asset detached from lot
 .. literalinclude:: tutorial/detached-from-lot-asset-view.http
    :language: javascript
 
-
+Completed asset
 .. literalinclude:: tutorial/complete-asset-view.http
       :language: javascript

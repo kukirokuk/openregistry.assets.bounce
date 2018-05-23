@@ -1,0 +1,119 @@
+PATCH /api/2.4/assets/e5ad643dfbbf4689a1adfec69f254603 HTTP/1.0
+Authorization: Basic Y29uY2llcmdlOg==
+Content-Length: 86
+Content-Type: application/json
+Host: lb.api-sandbox.registry.ea2.openprocurement.net
+DATA:
+{
+  "data": {
+    "status": "verification", 
+    "relatedLot": "888fa9fe1a544efd962c013a23b3277f"
+  }
+}
+
+Response: 200 OK
+Content-Type: application/json
+X-Content-Type-Options: nosniff
+{
+  "data": {
+    "status": "verification", 
+    "relatedLot": "888fa9fe1a544efd962c013a23b3277f", 
+    "rectificationPeriod": {
+      "startDate": "2018-05-23T13:21:12.727792+03:00", 
+      "endDate": "2018-05-24T13:21:12.727792+03:00"
+    }, 
+    "documents": [
+      {
+        "title": "Інформація про оприлюднення інформаційного повідомлення", 
+        "url": "https://prozorro.sale/info/ssp_details ", 
+        "documentOf": "asset", 
+        "datePublished": "2018-05-23T13:21:12.647141+03:00", 
+        "documentType": "informationDetails", 
+        "dateModified": "2018-05-23T13:21:12.647227+03:00", 
+        "id": "9f159b4177524cedb71231de6843cd1d"
+      }
+    ], 
+    "description": "Опис землі для космодрому", 
+    "title": "Земля для космодрому", 
+    "assetID": "UA-AR-DGF-2018-05-23-000001", 
+    "assetType": "bounce", 
+    "dateModified": "2018-05-23T13:21:12.808217+03:00", 
+    "owner": "broker", 
+    "items": [
+      {
+        "registrationDetails": {
+          "status": "unknown"
+        }, 
+        "description": "футляри до державних нагород", 
+        "classification": {
+          "scheme": "CAV-PS", 
+          "description": "Description", 
+          "id": "06121000-6"
+        }, 
+        "additionalClassifications": [
+          {
+            "scheme": "UA-EDR", 
+            "description": "папір і картон гофровані, паперова й картонна тара", 
+            "id": "17.21.1"
+          }
+        ], 
+        "address": {
+          "countryName": "Ukraine"
+        }, 
+        "id": "5be78bff843544d8babc11965f3509d8", 
+        "unit": {
+          "code": "code"
+        }, 
+        "quantity": 5.0001
+      }, 
+      {
+        "registrationDetails": {
+          "status": "unknown"
+        }, 
+        "description": "футляри до державних нагород", 
+        "classification": {
+          "scheme": "CAV-PS", 
+          "description": "Description", 
+          "id": "06121000-6"
+        }, 
+        "additionalClassifications": [
+          {
+            "scheme": "UA-EDR", 
+            "description": "папір і картон гофровані, паперова й картонна тара", 
+            "id": "17.21.1"
+          }
+        ], 
+        "address": {
+          "countryName": "Ukraine"
+        }, 
+        "id": "3efae29fac6a4f0f9a742c143d9b9e91", 
+        "unit": {
+          "code": "code"
+        }, 
+        "quantity": 5.0001
+      }
+    ], 
+    "date": "2018-05-23T13:21:12.807966+03:00", 
+    "decisions": [
+      {
+        "decisionDate": "2018-05-23T13:21:10.853759+03:00", 
+        "decisionID": "1111-4"
+      }
+    ], 
+    "id": "e5ad643dfbbf4689a1adfec69f254603", 
+    "assetCustodian": {
+      "contactPoint": {
+        "name": "Державне управління справами", 
+        "telephone": "0440000000"
+      }, 
+      "identifier": {
+        "scheme": "UA-EDR", 
+        "id": "00037256"
+      }, 
+      "address": {
+        "countryName": "Україна"
+      }
+    }
+  }
+}
+
